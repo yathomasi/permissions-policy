@@ -15,10 +15,10 @@ const permissionsPolicy = require('permissions-policy')
 
 app.use(permissionsPolicy({
   features: {
-    fullscreen: ['self'],
-    vibrate: ['none'],
-    payment: ['"example.com"'],
-    syncXhr: ['none']
+    fullscreen: ['self'],               // fullscreen=()
+    vibrate: ['none'],                  // vibrate=(none)
+    payment: ['self', '"example.com"'], // payment=(self "example.com")
+    syncXhr: [],                        // syncXhr=()
   }
 }))
 ```

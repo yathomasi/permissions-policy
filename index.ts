@@ -84,8 +84,8 @@ function getHeaderValueFromOptions(options: unknown): string {
       throw new Error(`permissionsPolicy does not support the "${ featureKeyCamelCase }" feature.`);
     }
 
-    if (!Array.isArray(featureValue) || featureValue.length === 0) {
-      throw new Error(`The value of the "${featureKeyCamelCase}" feature must be a non-empty array of strings.`);
+    if (!Array.isArray(featureValue)) {
+      throw new Error(`The value of the "${featureKeyCamelCase}" feature must be array of strings.`);
     }
 
     const allowedValuesSeen: Set<string> = new Set();
