@@ -118,12 +118,6 @@ describe('permissionsPolicy', () => {
     })).toThrow();
   });
 
-  it("fails if a feature's value is an empty array", () => {
-    expect(permissionsPolicy.bind(null, {
-      features: { vibrate: [] },
-    })).toThrow();
-  });
-
   it('fails if a feature value contains "*" and additional values', () => {
     expect(permissionsPolicy.bind(null, {
       features: { vibrate: ['*', 'example.com'] },
@@ -174,6 +168,16 @@ describe('permissionsPolicy', () => {
       .expect('Permissions-Policy', "vibrate=(none)")
       .expect('Hello world!');
   });
+
+  fit('can set "vibrate" as emtpy (disabled)', () => {
+    return request(app(permissionsPolicy({
+      features: { vibrate: [] },
+    })))
+      .get('/')
+      .expect('Permissions-Policy', "vibrate=()")
+      .expect('Hello world!');
+  });
+
 
   it('can set "vibrate" to contain domains', () => {
     return request(app(permissionsPolicy({

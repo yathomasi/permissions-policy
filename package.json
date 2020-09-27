@@ -2,7 +2,7 @@
   "name": "permissions-policy",
   "author": "Pedro Fernandes <pedrogbfernandes@gmail.com>",
   "description": "Middleware to set the Permissions-Policy HTTP header",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "keywords": [
     "helmet",
@@ -29,7 +29,7 @@
     "build": "npm run clean && tsc"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
