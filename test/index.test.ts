@@ -148,7 +148,7 @@ describe('permissionsPolicy', () => {
     })))
       .get('/')
       .expect('Permissions-Policy', 'vibrate=(*)')
-      .expect('Hello world!'); 
+      .expect('Hello world!');
   });
 
   it('can set "vibrate" to "self"', () => {
@@ -169,7 +169,7 @@ describe('permissionsPolicy', () => {
       .expect('Hello world!');
   });
 
-  fit('can set "vibrate" as emtpy (disabled)', () => {
+  it('can set "vibrate" as emtpy (disabled)', () => {
     return request(app(permissionsPolicy({
       features: { vibrate: [] },
     })))
