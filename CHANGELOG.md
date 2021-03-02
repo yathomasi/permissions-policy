@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.0 - 2021-03-2
+
+### Added
+
+- Prettier configuration to auto format the code
+- Usage of Readonly on the user configuration feeded into the PermissionsPolicy function.
+- Usage of Record to declare the types of keys and objects when useful.
+
+### Changed
+
+- Updated dependencies to their latest version.
+
 ## 0.3.0 - 2020-11-22
 
 ### Changed

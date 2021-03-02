@@ -1,12 +1,12 @@
 import { IncomingMessage, ServerResponse } from "http";
 
 interface PermissionsPolicyOptions {
-  features: { [featureName: string]: string[] };
+  features: Record<string, string[]>;
 }
 
 const reserveredKeywords = new Set(["self", "src", "*", "none"]);
 
-function isPlainObject(value: unknown): value is { [key: string]: unknown } {
+function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && !Array.isArray(value) && value !== null;
 }
 
@@ -15,7 +15,7 @@ function isQuoted(value: string) {
 }
 
 function getHeaderValueFromOptions(options: unknown): string {
-  const FEATURES: { [featureKeyCamelCase: string]: string } = {
+  const FEATURES: Record<string, string> = {
     accelerometer: "accelerometer",
     ambientLightSensor: "ambient-light-sensor",
     autoplay: "autoplay",
@@ -142,7 +142,9 @@ function getHeaderValueFromOptions(options: unknown): string {
   return result;
 }
 
-export = function permissionsPolicy(options: PermissionsPolicyOptions) {
+export = function permissionsPolicy(
+  options: Readonly<PermissionsPolicyOptions>
+) {
   const headerValue = getHeaderValueFromOptions(options);
 
   return function permissionsPolicy(
