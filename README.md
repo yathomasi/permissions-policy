@@ -1,8 +1,8 @@
 # Permissions Policy
 
-[![Build Status](https://travis-ci.org/pedro-gbf/permissions-policy.svg?branch=master)](https://travis-ci.org/pedro-gbf/permissions-policy)
+[![Build Status](https://travis-ci.com/pedro-gbf/permissions-policy.svg?branch=master)](https://travis-ci.com/pedro-gbf/permissions-policy)
 
-**NOTE: Since the `Feature-Policy` header was deprecated I've decided to adapt the old Evan Hahn `Permissions-Policy` repository and adapt it, this project was entirely built on top of his work.**
+**NOTE: Since the `Feature-Policy` header was deprecated I've decided to adapt the old Evan Hahn `Permissions-Policy` repository, this project was entirely built on top of his work.**
 
 This is a Express middleware to set the `Permissions-Policy` header. You can read more about it [here](https://www.w3.org/TR/permissions-policy-1/).
 
