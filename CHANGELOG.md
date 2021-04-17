@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Removed restrictions on which directives can be set; any key is allowed
+
 ## 0.4.0 - 2021-03-2
 
 ### Added
