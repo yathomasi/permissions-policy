@@ -1,6 +1,9 @@
 {
   "name": "permissions-policy",
   "author": "Pedro Fernandes <pedrogbfernandes@gmail.com>",
+  "contributors": [
+    "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)"
+  ],
   "description": "Middleware to set the Permissions-Policy HTTP header",
   "version": "0.4.0",
   "license": "MIT",
