@@ -42,6 +42,7 @@ The following features are currently supported:
 - `fullscreen`
 - `geolocation`
 - `gyroscope`
+- `interestCohort`
 - `layoutAnimations`
 - `legacyImageFormats`
 - `loadingFrameDefaultEager`
