@@ -6,7 +6,22 @@
 
 This is a Express middleware to set the `Permissions-Policy` header. You can read more about it [here](https://www.w3.org/TR/permissions-policy-1/).
 
-To use:
+## Installation
+
+### npm
+
+```bash
+npm i permissions-policy
+```
+### yarn
+
+```bash
+yarn add permissions-policy
+```
+
+
+## Usage
+
 
 ```javascript
 const permissionsPolicy = require("permissions-policy");
