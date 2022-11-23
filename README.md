@@ -13,15 +13,14 @@ This is a Express middleware to set the `Permissions-Policy` header. You can rea
 ```bash
 npm i permissions-policy
 ```
+
 ### yarn
 
 ```bash
 yarn add permissions-policy
 ```
 
-
 ## Usage
-
 
 ```javascript
 const permissionsPolicy = require("permissions-policy");
